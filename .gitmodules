@@ -1,0 +1,9 @@
+[submodule "core/hal"]
+	path = core/hal
+	url = https://github.com/STMicroelectronics/stm32f4xx-hal-driver.git
+[submodule "core/device"]
+	path = core/device
+	url = https://github.com/STMicroelectronics/cmsis-device-f4.git
+[submodule "core/arm-core"]
+	path = core/arm-core
+	url = https://github.com/ARM-software/CMSIS_4.git
