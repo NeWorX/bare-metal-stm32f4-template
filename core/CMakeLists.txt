@@ -17,6 +17,11 @@ add_library(ST::Device ALIAS Device)
 
 # HAL/LL
 list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_utils.c")
+list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_rcc.c")
+list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_exti.c")
+list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_pwr.c")
+list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_dma.c")
+list(APPEND LL_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/hal/Src/stm32f4xx_ll_gpio.c")
 add_library(LL STATIC ${LL_SOURCES})
 target_include_directories(LL INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/hal/Inc")
 target_include_directories(LL PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/hal/Inc")
