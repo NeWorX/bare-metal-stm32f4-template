@@ -62,3 +62,7 @@ add_custom_command(TARGET ${TARGET_NAME}
   COMMAND arm-none-eabi-objcopy -O ihex ${TARGET_NAME} ${TARGET_NAME}.hex
   COMMAND arm-none-eabi-objcopy -O binary ${TARGET_NAME} ${TARGET_NAME}.bin
 )
+
+install(TARGETS ${TARGET_NAME} ${TARGET_NAME}.hex ${TARGET_NAME}.bin ${TARGET_NAME}.map
+  DESTINATION bin
+)
