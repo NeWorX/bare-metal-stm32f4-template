@@ -59,10 +59,10 @@ add_custom_command(TARGET ${TARGET_NAME}
 # Create hex file
 add_custom_command(TARGET ${TARGET_NAME}
   POST_BUILD
-  COMMAND arm-none-eabi-objcopy -O ihex ${TARGET_NAME} ${TARGET_NAME}.hex
-  COMMAND arm-none-eabi-objcopy -O binary ${TARGET_NAME} ${TARGET_NAME}.bin
+  COMMAND arm-none-eabi-objcopy -O ihex ${TARGET_NAME} ${PROJECT_SOURCE_DIR}/bin/${TARGET_NAME}.hex
+  COMMAND arm-none-eabi-objcopy -O binary ${TARGET_NAME} ${PROJECT_SOURCE_DIR}/bin/${TARGET_NAME}.bin
 )
 
-install(TARGETS ${TARGET_NAME} ${TARGET_NAME}.hex ${TARGET_NAME}.bin ${TARGET_NAME}.map
+install(TARGETS ${TARGET_NAME}
   DESTINATION bin
 )
